@@ -1,0 +1,31 @@
+PROMPT EVOLUTION HISTORY
+========================
+
+SUMMARY PROMPT EVOLUTION:
+V1: "Summarize this loan application in 3-4 sentences:"
+Problems: Subjective, invented details, inconsistent structure
+
+V2: Added role (loan officer assistant), rules (factual, neutral, no invented details)
+Fixes: Professional tone, factual only, consistent structure
+
+EXTRACTION PROMPT EVOLUTION:
+V1: "Extract these fields from the letter:"
+Problems: Inconsistent JSON format, invented data for missing fields
+
+V2: Added schema, explicit null rule, examples
+Fixes: Valid JSON, null for missing data, consistent output
+
+BRIEF PROMPT EVOLUTION:
+V1: "Give a recommendation based on this:"
+Problems: Gave approve/reject decisions, value judgments
+
+V2: Added structure (STRENGTHS, RISKS, MISSING INFO, NEXT STEP)
+Fixes: Objective, next steps only, no final decisions
+
+KEY LESSONS:
+1. Always give the model a clear ROLE
+2. Provide SPECIFIC RULES
+3. Use STRUCTURED OUTPUT formats
+4. Temperature=0 for extraction
+5. Keep HUMAN in the loop for decisions
+6. Prompts are CODE - version control them!
